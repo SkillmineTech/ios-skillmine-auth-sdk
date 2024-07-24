@@ -47,13 +47,9 @@ Authenticator(
     onAccessTokenReceived: @escaping (String) -> Void
 )
 ```
-
-
-
-
-
-
-
+<br>
+<br>
+<br>
 **SwiftUI Integration**
 
 For SwiftUI, create an AuthenticatorView with an AuthenticatorViewModel that exposes an accessToken publisher.
@@ -90,7 +86,7 @@ struct ContentView: View {
     }
 }
 ```
-AuthenticatorViewModel: Manages the OAuth authentication process and provides the access token through a publisher.
-AuthenticatorView: SwiftUI view to present the authentication UI.
-accessToken Publisher: Used to handle the access token once it's received.
+AuthenticatorViewModel: Manages the OAuth authentication process and provides the access token through a publisher.<br>
+AuthenticatorView: SwiftUI view to present the authentication UI.<br>
+accessToken Publisher: Used to handle the access token once it's received.<br>
 Note: Adjust the URLs, client IDs, and redirect URIs as needed for your specific use case.
