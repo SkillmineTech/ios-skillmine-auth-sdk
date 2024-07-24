@@ -43,7 +43,7 @@ public struct AuthenticatorView: UIViewRepresentable {
                 return
             }
 
-            if urlString.starts(with: "http://localhost:3000") {
+            if urlString.starts(with: viewModel.redirectUri) {
                 if let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
                    let accessToken = components.queryItems?.first(where: { $0.name == "access_token" })?.value {
                     self.viewModel.accessToken.send(accessToken)
