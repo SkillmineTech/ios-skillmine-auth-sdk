@@ -50,6 +50,7 @@ Authenticator(
 <br>
 <br>
 <br>
+
 **SwiftUI Integration**
 
 For SwiftUI, create an AuthenticatorView with an AuthenticatorViewModel that exposes an accessToken publisher.
