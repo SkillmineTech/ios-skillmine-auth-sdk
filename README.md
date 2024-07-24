@@ -34,7 +34,9 @@ class ViewController: UIViewController, UIKitOAuthPresentable {
 ```
 
 UIKitOAuthPresentable Protocol: Ensures the ViewController can present and dismiss the Authenticator.
-presentAuthenticator: Method to present the OAuth login UI. It requires the OAuth URL, Client ID, Redirect URI, and a closure to handle the received access token.
+presentAuthenticator: Method to present the OAuth login UI. It requires the OAuth URL, Client ID, Redirect URI, and a closure to handle the received access token.<br>
+
+
 Note: If you need more control over how the Authenticator is presented and dismissed, you can initialize the Authenticator directly as a WKWebView and embed it where needed.
 
 ```
