@@ -1,11 +1,11 @@
 # ios-skillmine-auth-sdk
 
-**UIKit Integration:-**
+**UIKit Integration**
 
 To present the Authenticator and dismiss it once the token is received, ensure your UIViewController conforms to the UIKitOAuthPresentable protocol and calls presentAuthenticator.
 ```
 import UIKit
-import Authenticator
+import SkillmineAuthSDK
 
 // Conforms to UIKitOAuthPresentable to present and dismiss the Authenticator
 class ViewController: UIViewController, UIKitOAuthPresentable {
@@ -48,13 +48,17 @@ Authenticator(
 
 
 
-**SwiftUI Integration:-**
+
+
+
+
+**SwiftUI Integration**
 
 For SwiftUI, create an AuthenticatorView with an AuthenticatorViewModel that exposes an accessToken publisher.
 
 ```
 import SwiftUI
-import Authenticator
+import SkillmineAuthSDK
 import Combine
 
 // SwiftUI View to handle authentication
