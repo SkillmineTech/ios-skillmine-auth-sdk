@@ -21,9 +21,9 @@ class ViewController: UIViewController, UIKitOAuthPresentable {
     func getToken() {
         // Presents the Authenticator UI for OAuth login
         presentAuthenticator(
-            urlString: "https://nightly-accounts-api.complyment.com/authz-srv/authz", // OAuth URL
-            clientId: "236b91c8-b2f0-4891-a83c-f358a109a843", // Client ID for OAuth
-            redirectUri: "http://localhost:3000", // Redirect URI after authentication
+            urlString: urlString, // OAuth URL
+            clientId: clientId, // Client ID for OAuth
+            redirectUri: redirectUri, // Redirect URI after authentication
             onAccessTokenReceived: { [weak self] token in
                 // Handle the access token received from the Authenticator
                 self?.token = token
@@ -65,9 +65,9 @@ struct ContentView: View {
     
     // ViewModel for handling Authenticator interactions
     @ObservedObject var viewModel = AuthenticatorViewModel(
-        urlString: "https://nightly-accounts-api.complyment.com/authz-srv/authz", // OAuth URL
-        clientId: "236b91c8-b2f0-4891-a83c-f358a109a843", // Client ID for OAuth
-        redirectUri: "http://localhost:3000" // Redirect URI after authentication
+        urlString: urlString, // OAuth URL
+        clientId: clientId, // Client ID for OAuth
+        redirectUri: redirectUri // Redirect URI after authentication
     )
     
     @State var cancellable: AnyCancellable?

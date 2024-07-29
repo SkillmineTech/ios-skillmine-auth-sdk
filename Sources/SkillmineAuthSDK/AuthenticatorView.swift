@@ -38,11 +38,6 @@ public struct AuthenticatorView: UIViewRepresentable {
 
             let urlString = url.absoluteString
 
-            if urlString.starts(with: "https://nightly-accounts.complyment.com/profile/personal-detail") {
-                decisionHandler(.cancel)
-                return
-            }
-
             if urlString.starts(with: viewModel.redirectUri) {
                 if let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
                    let accessToken = components.queryItems?.first(where: { $0.name == "access_token" })?.value {
